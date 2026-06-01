@@ -34,9 +34,9 @@ struct lS_descritor{
 
 
 /*********************************************************/
-/**      Fun��o que captura apenas as letras
-        do alfabeto americano, descartando pontua��o
-                e acentua��o.                           **/
+/**      Funcao que captura apenas as letras
+        do alfabeto americano, descartando pontuacao
+                e acentuacao.                           **/
 /*********************************************************/
 /*********************************************************/
 /**      Function than catch only letters and
@@ -56,11 +56,11 @@ void tokenization(char* word){
 
 
 /*********************************************************/
-/**      Fun��o que recebe o nome de um arquivo
+/**      Funcao que recebe o nome de um arquivo
         e armazena todas as palavras em uma
         lista ligada. Caso encontre palavras repetidas,
         as descarta imediatamente.                      **/
-/**     RETORNO: um ponteiro para a lista constru�da    **/
+/**     RETORNO: um ponteiro para a lista construida    **/
 /*********************************************************/
 /*********************************************************/
 /**      A function that receives the name of a file
@@ -74,7 +74,7 @@ lS_descritor* readArchive(char* file_name){
     // Open archive
     FILE* file = fopen(file_name, "r");
 
-    // Vari�veis auxiliares
+    // Variaveis auxiliares
     // Auxiliar variables
     lS_descritor* ret = malloc(sizeof(lS_descritor));
     ret->head = NULL;
@@ -83,7 +83,7 @@ lS_descritor* readArchive(char* file_name){
     node_string_List* before = NULL;
     char* next_word;
 
-    // Verificando caso o arquivo n�o foi encontrado
+    // Verificando caso o arquivo nao foi encontrado
     // Checking if the archive don't exist
     if(!file){
         perror(file_name);
