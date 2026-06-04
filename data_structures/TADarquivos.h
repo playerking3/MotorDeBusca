@@ -2,7 +2,11 @@
 #include <stdlib.h>
 #include <string.h>
 #include <locale.h>
+#include "hashTable.h"
 
+
+// TO COMMENT
+#define MAX_TO_PROCESS 20
 
 /*********************************************************/
 /**     No de para armazenar as palavras lidas no
@@ -30,6 +34,13 @@ struct lS_descritor{
     node_string_List* head;
     int Size;
 } typedef lS_descritor;
+
+
+// TO COMMENT
+typedef struct archiveWords{
+    char* name;
+    struct hashNode* first;
+}archiveWords;
 
 
 
@@ -125,4 +136,47 @@ lS_descritor* readArchive(char* file_name){
     ret->head = actual;
 
     return ret;
+}
+
+
+// TO COMMENT
+archiveWords findLastArchive(archiveWords words[]){
+    archiveWords ret;
+    ret.first = NULL;
+    ret.name = NULL;
+    for(int i = MAX_TO_PROCESS; i >= 0; i--){
+        if(words[i] != NULL)
+            return archiveWords words[i];
+    }
+    return ret;
+}
+
+
+void insertArchiveList(archiveWords archives[], archiveWords* words){
+    static int index = 0;
+    if(index < MAX_TO_PROCESS)
+        archiveWords[index] = *words;
+}
+
+void printHashNode(hashNode node){
+    printf( "Palavra: %s\n", node.palavra,
+            "ID Global: %d\n", node.idGlobal,
+            "Frequencia: %d\n", node.frequencia);
+}
+
+void printArchiveWords(archiveWords words){
+    hashNode* aux = words.first;
+    while(aux != NULL){
+        printHashNode(*aux);
+        aux = aux->next;
+    }
+}
+
+hashNode* findWordByID(archiveWords words, int ID){
+    hashNode* aux = words.first;
+    while(aux != NULL){
+        if(aux->idGlobal == ID)
+            return aux;
+    }
+    return NULL;
 }

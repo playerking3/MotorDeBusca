@@ -8,6 +8,7 @@
 int main(){
     Queue* documentsQueue;
     Stack* processStack;
+    archiveWords processedArchives[MAX_TO_PROCESS];
     int op;
     char file[MAX_FILE];
 
@@ -18,6 +19,11 @@ int main(){
     processStack = malloc(sizeof(Stack));
     processStack->head = NULL;
     processStack->_size = 0;
+
+    for(int i = 0; i < MAX_TO_PROCESS; i++){
+        processedArchives[i].first= NULL;
+        processedArchives[i].name= NULL;
+    }
 
     while(1){
         op = MainMenu();
@@ -50,8 +56,18 @@ int main(){
                     printf("Pilha de processos vazia!\n");
                 break;
             case 7:
+                int id;
+                hashNode aux;
+
+                printf("Digite o ID da palavra a ser buscada:\n");
+                scanf("%d", &id);
+                getchar();
+
+                aux = findWordByID(findLastArchive(processedArchives), id);
+                printHashNode(aux);
                 break;
             case 8:
+                printArchiveWords(findLastArchive(processedArchives));
                 break;
             case 9:
                 break;
