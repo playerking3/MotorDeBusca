@@ -27,7 +27,7 @@ int stackIsEmpty(Stack _stack){
 }
 
 // Empilha dados
-void push(Stack *_stack, char *content){
+void stackPush(Stack *_stack, char *content){
     // Cria novo nó
     struct StackNode *newNode = malloc(sizeof(struct StackNode));
     strcpy(newNode->content, content);
@@ -43,7 +43,7 @@ void push(Stack *_stack, char *content){
 }
 
 //Desempilha dados
-char *pop(Stack *_stack){
+char *stackPop(Stack *_stack){
     char* content = malloc(sizeof(char)*SIZE);
     struct StackNode *aux = _stack->head;
     _stack->head = aux->next;
@@ -52,9 +52,21 @@ char *pop(Stack *_stack){
     return content;
 }
 
-char *peek(Stack _stack){
-    if(stackIsEmpty(_stack) == 0){
+char *stackPeek(Stack _stack){
+    if(!stackIsEmpty(_stack)){
         return _stack.head->content;
     }
     return NULL;
+}
+
+void printStack(Stack _stack){
+    struct StackNode* aux;
+    if(!stackIsEmpty(_stack)){
+        aux = _stack.head;
+        for(int i = 0; i < _stack._size; i++){
+            printf("Processo %d: %s\n", i+1, aux->content);
+            aux = aux->next;
+        }
+    }else
+        printf("Nenhum processo realizado!\n");
 }

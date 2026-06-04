@@ -7,11 +7,17 @@
 
 int main(){
     Queue* documentsQueue;
+    Stack* processStack;
     int op;
     char file[MAX_FILE];
+
     documentsQueue = malloc(sizeof(Queue));
     documentsQueue->head = NULL;
     documentsQueue->tail = NULL;
+
+    processStack = malloc(sizeof(Stack));
+    processStack->head = NULL;
+    processStack->_size = 0;
 
     while(1){
         op = MainMenu();
@@ -30,7 +36,28 @@ int main(){
                 printf("Arquivo desenfileirado!\n");
                 break;
             case 3:
-                printf("Proximo documento na fila: %s\n", fileQueuePeek(documentsQueue[0]));
+                printf("Proximo documento na fila: %s\n", fileQueuePeek(*documentsQueue));
+                break;
+            case 4:
+                break;
+            case 5:
+                printStack(*processStack);
+                break;
+            case 6:
+                if(stackPeek(*processStack) != NULL)
+                    printf("Ultimo processo: %s\n", stackPeek(*processStack));
+                else
+                    printf("Pilha de processos vazia!\n");
+                break;
+            case 7:
+                break;
+            case 8:
+                break;
+            case 9:
+                break;
+            case 10:
+                break;
+            case 11:
                 break;
         }
     }
