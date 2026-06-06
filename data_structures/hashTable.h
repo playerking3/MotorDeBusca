@@ -3,22 +3,22 @@
 
 #define TABLE_SIZE 139
 
-struct hashNode{
+typedef struct hashNode{
     char *palavra;
     int idGlobal;
     int frequencia;
     struct hashNode *next;
-};
+} hashNode;
 
 typedef struct{
     struct hashNode* first[TABLE_SIZE];
 }HashTable;
 
-HashTable init(HashTable _hash){
+HashTable init(HashTable* _hash){
     for(int i = 0; i < TABLE_SIZE; i++){
-        _hash.first[i] = NULL;
+        _hash->first[i] = NULL;
     }
-    return _hash;
+    return *_hash;
 }
 
 int hashFunc(char *palavra){
@@ -29,36 +29,38 @@ int hashFunc(char *palavra){
     return counter%TABLE_SIZE;
 }
 
-struct hashNode* findInHash(struct hashNode *first, char *palavra){
-    while(first != NULL){
-        if(strcmp(first->palavra, palavra) == 0){
-            return first;
+hashNode* findInHash(hashNode *first, char *palavra){
+    hashNode* aux = first;
+    while(aux != NULL){
+        if(strcmp(aux->palavra, palavra) == 0){
+            return aux;
         }
-        first = first->next;
+        aux = aux->next;
     }
     return NULL;
 }
 
-void insertHashTable(char *palavra, HashTable _hash){
+hashNode* insertHashTable(char *palavra, HashTable* _hash){
     static int globalId = 0;
     int tableIndex = hashFunc(palavra);
-    struct hashNode *newNode = findInHash(_hash.first[tableIndex], palavra);
+    hashNode *newNode = findInHash(_hash->first[tableIndex], palavra);
     if(newNode != NULL){ // Se a palavra ja existir aumenta a frequência
         newNode->frequencia++;
     }else{
-        newNode = malloc(sizeof(struct hashNode));
+        newNode = malloc(sizeof(hashNode));
+        newNode->palavra = malloc(sizeof(char)*strlen(palavra));
         strcpy(newNode->palavra, palavra);
         newNode->frequencia = 1;
-        newNode->idGlobal = globalId;
-        globalId++;
-        if(_hash.first[tableIndex] == NULL){
-            _hash.first[tableIndex] = newNode;
+        newNode->idGlobal = globalId++;
+        if(_hash->first[tableIndex] == NULL){
+            _hash->first[tableIndex] = newNode;
             newNode->next = NULL;
         }else{
-            newNode->next = _hash.first[tableIndex];
-            _hash.first[tableIndex] = newNode;
+            newNode->next = _hash->first[tableIndex];
+            _hash->first[tableIndex] = newNode;
         }
     }
+    return newNode;
 }
 
 int findID(char *palavra, HashTable _hash){
@@ -69,4 +71,12 @@ int findID(char *palavra, HashTable _hash){
     }
     return -1;
 }
+
+
+void printHashNode(hashNode node){
+    printf( "Palavra: %s\n", node.palavra,
+            "ID Global: %d\n", node.idGlobal,
+            "Frequencia: %d\n", node.frequencia);
+}
+
 

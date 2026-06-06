@@ -39,7 +39,7 @@ struct lS_descritor{
 // TO COMMENT
 typedef struct archiveWords{
     char* name;
-    struct hashNode* first;
+    hashNode* first;
 }archiveWords;
 
 
@@ -83,7 +83,7 @@ void tokenization(char* word){
 lS_descritor* readArchive(char* file_name){
     // Abertura do arquivo
     // Open archive
-    FILE* file = fopen(file_name, "r");
+    FILE* file = fopen("teste.txt", "r");
 
     // Variaveis auxiliares
     // Auxiliar variables
@@ -145,8 +145,8 @@ archiveWords findLastArchive(archiveWords words[]){
     ret.first = NULL;
     ret.name = NULL;
     for(int i = MAX_TO_PROCESS; i >= 0; i--){
-        if(words[i] != NULL)
-            return archiveWords words[i];
+        if(words[i].name != NULL)
+            return words[i];
     }
     return ret;
 }
@@ -155,17 +155,11 @@ archiveWords findLastArchive(archiveWords words[]){
 void insertArchiveList(archiveWords archives[], archiveWords* words){
     static int index = 0;
     if(index < MAX_TO_PROCESS)
-        archiveWords[index] = *words;
-}
-
-void printHashNode(hashNode node){
-    printf( "Palavra: %s\n", node.palavra,
-            "ID Global: %d\n", node.idGlobal,
-            "Frequencia: %d\n", node.frequencia);
+        archives[index] = *words;
 }
 
 void printArchiveWords(archiveWords words){
-    hashNode* aux = words.first;
+    struct hashNode* aux = words.first;
     while(aux != NULL){
         printHashNode(*aux);
         aux = aux->next;
