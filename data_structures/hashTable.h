@@ -31,8 +31,10 @@ int hashFunc(char *palavra){
 
 hashNode* findInHash(hashNode *first, char *palavra){
     hashNode* aux = first;
+    int i = 0;
     while(aux != NULL){
-        if(strcmp(aux->palavra, palavra) == 0){
+        printf("\n%s\n", aux->palavra);
+        if(!strcmp(aux->palavra, palavra)){
             return aux;
         }
         aux = aux->next;
@@ -52,9 +54,9 @@ hashNode* insertHashTable(char *palavra, HashTable* _hash){
         strcpy(newNode->palavra, palavra);
         newNode->frequencia = 1;
         newNode->idGlobal = globalId++;
+        newNode->next = NULL;
         if(_hash->first[tableIndex] == NULL){
             _hash->first[tableIndex] = newNode;
-            newNode->next = NULL;
         }else{
             newNode->next = _hash->first[tableIndex];
             _hash->first[tableIndex] = newNode;

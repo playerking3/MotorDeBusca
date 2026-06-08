@@ -58,8 +58,10 @@ void tokenization(char* word){
         if((word[i] >= 'A' && word[i] <= 'Z'))
             word[i] += 32;
         if(!(word[i] >= 'a' && word[i] <= 'z')){
-            for(int j = i; j < strlen(word); j++)
+            for(int j = i; j < strlen(word); j++){
                 word[j] = word[j+1];
+            }
+            i--;
         }
     }
 }
