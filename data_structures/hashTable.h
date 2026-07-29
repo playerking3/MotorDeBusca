@@ -31,9 +31,8 @@ int hashFunc(char *palavra){
 
 hashNode* findInHash(hashNode *first, char *palavra){
     hashNode* aux = first;
-    int i = 0;
-    while(aux != NULL){
-        printf("\n%s\n", aux->palavra);
+    int c = 0;
+    while(aux != NULL && c++ < 50){
         if(!strcmp(aux->palavra, palavra)){
             return aux;
         }
@@ -76,9 +75,7 @@ int findID(char *palavra, HashTable _hash){
 
 
 void printHashNode(hashNode node){
-    printf( "Palavra: %s\n", node.palavra,
-            "ID Global: %d\n", node.idGlobal,
-            "Frequencia: %d\n", node.frequencia);
+    printf( "===================\nPalavra: %s\nID Global: %d\nFrequencia: %d\n", node.palavra, node.idGlobal, node.frequencia);
 }
 
 

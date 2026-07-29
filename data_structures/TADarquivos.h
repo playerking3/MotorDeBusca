@@ -85,8 +85,7 @@ void tokenization(char* word){
 lS_descritor* readArchive(char* file_name){
     // Abertura do arquivo
     // Open archive
-    FILE* file = fopen("teste.txt", "r");
-
+    FILE* file = fopen(file_name, "r");
     // Variaveis auxiliares
     // Auxiliar variables
     lS_descritor* ret = malloc(sizeof(lS_descritor));
@@ -100,7 +99,7 @@ lS_descritor* readArchive(char* file_name){
     // Checking if the archive don't exist
     if(!file){
         perror(file_name);
-        return ret;
+        return NULL;
     }
 
     // Buffer de 50 letras para armazenamento das palavras
@@ -142,15 +141,13 @@ lS_descritor* readArchive(char* file_name){
 
 
 // TO COMMENT
-archiveWords findLastArchive(archiveWords words[]){
-    archiveWords ret;
-    ret.first = NULL;
-    ret.name = NULL;
-    for(int i = MAX_TO_PROCESS; i >= 0; i--){
-        if(words[i].name != NULL)
-            return words[i];
+archiveWords* findLastArchive(archiveWords words[]){
+    for(int i = MAX_TO_PROCESS-1; i >= 0; i--){
+        if(words[i].name != NULL){
+            return &words[i];
+        }
     }
-    return ret;
+    return NULL;
 }
 
 
@@ -171,8 +168,10 @@ void printArchiveWords(archiveWords words){
 hashNode* findWordByID(archiveWords words, int ID){
     hashNode* aux = words.first;
     while(aux != NULL){
-        if(aux->idGlobal == ID)
+        if(aux->idGlobal == ID){
             return aux;
+        }
+        aux = aux->next;
     }
     return NULL;
 }

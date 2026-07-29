@@ -1,7 +1,8 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define SIZE 12
+#define SIZE 70
+
 /*
 A pilha indica qual foi o procedimento feito no documento
 */
@@ -27,10 +28,11 @@ int stackIsEmpty(Stack _stack){
 }
 
 // Empilha dados
-void stackPush(Stack *_stack, char *content){
+void stackPush(Stack *_stack, char *requisitor, char *content){
     // Cria novo nó
     struct StackNode *newNode = malloc(sizeof(struct StackNode));
-    strcpy(newNode->content, content);
+    char* aux = malloc(sizeof(char)* (strlen(requisitor) + strlen(content) + 1));
+    strcpy(newNode->content, aux);
 
     // Se a pilha estiver vazia, coloca como primeiro
     if(stackIsEmpty(*_stack) == 1){
@@ -40,6 +42,7 @@ void stackPush(Stack *_stack, char *content){
         newNode->next = _stack->head;
         _stack->head = newNode;
     }
+    _stack->_size++;
 }
 
 //Desempilha dados
@@ -62,9 +65,10 @@ char *stackPeek(Stack _stack){
 void printStack(Stack _stack){
     struct StackNode* aux;
     if(!stackIsEmpty(_stack)){
+        printf("%d\n", _stack._size);
         aux = _stack.head;
-        for(int i = 0; i < _stack._size; i++){
-            printf("Processo %d: %s\n", i+1, aux->content);
+        for(int i = _stack._size; i > 0; i--){
+            printf("Processo %d: %s\n", i, aux->content);
             aux = aux->next;
         }
     }else
