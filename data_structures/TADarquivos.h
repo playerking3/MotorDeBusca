@@ -4,8 +4,14 @@
 #include <locale.h>
 #include "hashTable.h"
 
-
-// TO COMMENT
+/*********************************************************/
+/**      Define utilizado para definir o maximo de
+        arquivos processaveis.
+/*********************************************************/
+/*********************************************************/
+/**      This define set the max number of documents
+        to process.                                     **/
+/*********************************************************/
 #define MAX_TO_PROCESS 20
 
 /*********************************************************/
@@ -35,8 +41,14 @@ struct lS_descritor{
     int Size;
 } typedef lS_descritor;
 
-
-// TO COMMENT
+/*********************************************************/
+/**          Struct responsavel por estruturar o array
+            que conterá todas as palavras de um arquivo.**/
+/*********************************************************/
+/*********************************************************/
+/**          This struct do a model for the archive
+            array than have all words of it.            **/
+/*********************************************************/
 typedef struct archiveWords{
     char* name;
     hashNode* first;
@@ -140,7 +152,14 @@ lS_descritor* readArchive(char* file_name){
 }
 
 
-// TO COMMENT
+/*********************************************************/
+/**          Funcao responsavel por localizar o ultimo
+            arquivo processado.                         **/
+/*********************************************************/
+/*********************************************************/
+/**          Function than localize the last processed
+            archive.                                    **/
+/*********************************************************/
 archiveWords* findLastArchive(archiveWords words[]){
     for(int i = MAX_TO_PROCESS-1; i >= 0; i--){
         if(words[i].name != NULL){
@@ -151,12 +170,29 @@ archiveWords* findLastArchive(archiveWords words[]){
 }
 
 
+/*********************************************************/
+/**          Funcao que insere o arquivo na lista de
+            arquivos processados.                       **/
+/*********************************************************/
+/*********************************************************/
+/**          Function than insert a archive in
+            the processed archive list.                 **/
+/*********************************************************/
 void insertArchiveList(archiveWords archives[], archiveWords* words){
     static int index = 0;
     if(index < MAX_TO_PROCESS)
         archives[index] = *words;
 }
 
+
+/*********************************************************/
+/**          Funcao que exibe todas as palavras da
+            struct "archiveWords" enviado.              **/
+/*********************************************************/
+/*********************************************************/
+/**          Function than print all words in the
+            struct "archiveWords" sent.                 **/
+/*********************************************************/
 void printArchiveWords(archiveWords words){
     struct hashNode* aux = words.first;
     while(aux != NULL){
@@ -165,6 +201,16 @@ void printArchiveWords(archiveWords words){
     }
 }
 
+
+/*********************************************************/
+/**          Funcao que encontra o no que possui
+            o mesmo ID que o enviado e retorna este no. **/
+/*********************************************************/
+/*********************************************************/
+/**          Function than access all words in the
+            struct "archiveWords" and return the node
+            than has the same ID sent.                  **/
+/*********************************************************/
 hashNode* findWordByID(archiveWords words, int ID){
     hashNode* aux = words.first;
     while(aux != NULL){
