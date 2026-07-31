@@ -7,19 +7,33 @@
 A pilha indica qual foi o procedimento feito no documento
 */
 
-// Estrutura de nós da pilha
+/*********************************************************/
+/**          Estrutura de nos da pilha.                 **/
+/*********************************************************/
+/*********************************************************/
+/**          Struct to model the stack.                 **/
+/*********************************************************/
 struct StackNode{
     char content[SIZE];
     struct StackNode *next;
 };
-
-// Descritor da pilha
+/*********************************************************/
+/**          Descritor da pilha.                        **/
+/*********************************************************/
+/*********************************************************/
+/**          Stack Descriptor.                         **/
+/*********************************************************/
 typedef struct{
     struct StackNode *head;
     int _size;
 } Stack;
 
-//Verifica se a pilha está vazia
+/*********************************************************/
+/**     Funcao que verifica se a pilha esta vazia.      **/
+/*********************************************************/
+/*********************************************************/
+/**     Function than verify if the stack is empty.     **/
+/*********************************************************/
 int stackIsEmpty(Stack _stack){
     if(_stack.head == NULL){
         return 1;
@@ -27,14 +41,24 @@ int stackIsEmpty(Stack _stack){
     return 0;
 }
 
-// Empilha dados
+/*********************************************************/
+/**          Funcao que empilha os dados baseado no
+            arquivo que esta executando a funcao.       **/
+/*********************************************************/
+/*********************************************************/
+/**          Function than push a log based on the
+            actual archive and the operation.           **/
+/*********************************************************/
 void stackPush(Stack *_stack, char *requisitor, char *content){
-    // Cria novo nó
+
+    //  Cria novo no
+    //  Create a new node
     struct StackNode *newNode = malloc(sizeof(struct StackNode));
     char* aux = malloc(sizeof(char)* (strlen(requisitor) + strlen(content) + 1));
     strcpy(newNode->content, aux);
 
-    // Se a pilha estiver vazia, coloca como primeiro
+    //  Se a pilha estiver vazia, coloca como primeiro
+    //  If Stack is empty, then put it in first.
     if(stackIsEmpty(*_stack) == 1){
         newNode->next = NULL;
         _stack->head = newNode;
@@ -44,8 +68,12 @@ void stackPush(Stack *_stack, char *requisitor, char *content){
     }
     _stack->_size++;
 }
-
-//Desempilha dados
+/*********************************************************/
+/**      Funcao que desempilha o dado e o retorna.      **/
+/*********************************************************/
+/*********************************************************/
+/**      Function than pop the data and return it.      **/
+/*********************************************************/
 char *stackPop(Stack *_stack){
     char* content = malloc(sizeof(char)*SIZE);
     struct StackNode *aux = _stack->head;
@@ -55,6 +83,16 @@ char *stackPop(Stack *_stack){
     return content;
 }
 
+
+
+/*********************************************************/
+/**          Funcao que retorna o topo da pilha
+            sem demsempilhar.                           **/
+/*********************************************************/
+/*********************************************************/
+/**          Function than return the stack top but
+            don't pop it.                               **/
+/*********************************************************/
 char *stackPeek(Stack _stack){
     if(!stackIsEmpty(_stack)){
         return _stack.head->content;
@@ -62,6 +100,15 @@ char *stackPeek(Stack _stack){
     return NULL;
 }
 
+
+/*********************************************************/
+/**          Funcao que exibe todos os processos
+            empilhados ate o atual momento.             **/
+/*********************************************************/
+/*********************************************************/
+/**          Function to print all process already
+            pushed to stack.                            **/
+/*********************************************************/
 void printStack(Stack _stack){
     struct StackNode* aux;
     if(!stackIsEmpty(_stack)){

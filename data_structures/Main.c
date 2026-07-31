@@ -4,18 +4,49 @@
 #include "queue.h"
 #include <conio.h>
 
+//  Maximo de palavras diferentes que o sistema pode ler
+//  Max diferrent words than the system suports.
 #define MAX_WORDS 5000
+
+//  Maximo de caracteres que uma palavra pode ter
+//  Max chars than a word can has
 #define MAX_CHAR 30
 
+
+
+/*********************************************************/
+/**      Insere uma palavra (e suas informacoes)
+        no dicionario global.                           **/
+/*********************************************************/
+/*********************************************************/
+/**      Insert into the global dictionary a word
+        and your informations.                          **/
+/*********************************************************/
 void insertWordDictionary(hashNode dictionary[], int id, hashNode to_Insert){
-//    printHashNode(to_Insert);
     dictionary[id] = to_Insert;
 }
 
+
+/*********************************************************/
+/**      Retorna uma palavra do dicionario global
+        pelo ID.                                        **/
+/*********************************************************/
+/*********************************************************/
+/**      Return a word from global dictionary based
+        at ID sent.                                     **/
+/*********************************************************/
 char* getWordFromDictionary(hashNode dictionary[], int id){
     return dictionary[id].palavra;
 }
 
+
+/*********************************************************/
+/**      Retorna o ID do dicionario global da palavra.  **/
+/*********************************************************/
+/*********************************************************/
+/**      Return an ID from global dictionary based
+        at the word sent.                               **/
+/*********************************************************/
 int getIdFromDictionary(hashNode dictionary[], char* palavra){
     for(int i = 0; i < MAX_WORDS; i++){
         if((dictionary[i].palavra != NULL && palavra != NULL) && (!strcmp(dictionary[i].palavra, palavra))){
@@ -25,7 +56,17 @@ int getIdFromDictionary(hashNode dictionary[], char* palavra){
     return -1;
 }
 
+
+
+/*********************************************************/
+/*********************************************************/
+/**                  MAIN FUNCTION                      **/
+/*********************************************************/
+/*********************************************************/
 int main(){
+
+    //  Estrutura de dados utilizados durante o programa para execucao das diversas funcoes
+    //  Data Structs used while the program is running to do all functions correctly
     Queue* documentsQueue;
 
     Stack* processStack;
@@ -57,21 +98,28 @@ int main(){
     processStack->head = NULL;
     processStack->_size = 0;
 
+    //  Inicializacao de "processedArchives"
+    //  "processedArchives" inicialization
     for(int i = 0; i < MAX_TO_PROCESS; i++){
         processedArchives[i].first= NULL;
         processedArchives[i].name= NULL;
     }
 
+    //  Inicializacao de "globalDictionary"
+    //  "globalDictionary" inicialization
     for(int i = 0; i < MAX_WORDS; i++){
         globalDictionary[i].palavra = NULL;
         globalDictionary[i].next = NULL;
         globalDictionary[i].frequencia = 0;
         globalDictionary[i].idGlobal = -1;
     }
+
+    //  While para repeticao do codigo
+    //  While to choose different functions
     while(1){
         op = MainMenu();
         switch(op){
-            case 1:
+            case 1:     // Enfileirar documento
                 printf("Digite o nome do arquivo a ser enfileirado\n"
                        "(Nao deve haver espacos ou caracteres especiais):\n");
                 if(fgets(file, MAX_FILE, stdin) != NULL){
@@ -81,14 +129,14 @@ int main(){
                 } else
                     printf("Erro na leitura do nome do arquivo!\n");
                 break;
-            case 2:
+            case 2:     // Remover documento
                 fileDequeue(documentsQueue);
                 printf("Arquivo desenfileirado!\n");
                 break;
-            case 3:
+            case 3:     // Visualizar proximo documento
                 printf("Proximo documento na fila: %s\n", fileQueuePeek(*documentsQueue));
                 break;
-            case 4:
+            case 4:     // Processar proximo documento
                 nextDocument = fileDequeue(documentsQueue);
                 stackPush(processStack, nextDocument, " - Arquivo desenfileirado!\n");
 
@@ -118,16 +166,16 @@ int main(){
                     printf("Erro com o documento!\n");
                 }
                 break;
-            case 5:
+            case 5:             //  Exibir a pilha de processos
                 printStack(*processStack);
                 break;
-            case 6:
+            case 6:             //  Visualizar o ultimo processo
                 if(stackPeek(*processStack) != NULL)
                     printf("Ultimo processo: %s\n", stackPeek(*processStack));
                 else
                     printf("Pilha de processos vazia!\n");
                 break;
-            case 7:
+            case 7:             //  Buscar palavra pelo ID (Apenas no ultimo documento)
                 printf("Digite o ID da palavra a ser buscada:\n");
                 scanf("%d", &id);
                 getchar();
@@ -141,13 +189,13 @@ int main(){
                 }else
                     printf("Nenhum arquivo processado!\n");
                 break;
-            case 8:
+            case 8:             //  Visualizar todas as palavras do ultimo arquivo
                 if(findLastArchive(processedArchives) != NULL)
                     printArchiveWords(*findLastArchive(processedArchives));
                 else
                     printf("Nenhum documento processado!\n");
                 break;
-            case 9:
+            case 9:             //  Buscar ID de uma palavra (Contexto global)
                 printf("Digite a palavra:\n");
                 scanf("%s", palavra);
                 if(getIdFromDictionary(globalDictionary, palavra) != -1)
@@ -155,7 +203,7 @@ int main(){
                 else
                     printf("Nenhum ID associado a esta palavra!\n");
                 break;
-            case 10:
+            case 10:            //  Buscar palavra pelo seu ID  (Contexto global)
                 printf("Digite o ID da palavra a ser buscada:\n");
                 scanf("%d", &id);
                 getchar();
@@ -164,7 +212,7 @@ int main(){
                 else
                     printf("Nenhuma palavra associada a este ID!\n");
                 break;
-            case 11:
+            case 11:            //  Buscar documentos relevantes pelo score
                 break;
         }
     }
