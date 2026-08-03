@@ -32,3 +32,10 @@ int MainMenu(){
     return ret;
 }
 
+int StdinIsEmpty(){
+    int ch = getc(stdin);
+    if (ch == '\n') {
+        return 1; // Vazio ou fim de arquivo (EOF)
+    }
+    return 0; // Não está vazio
+}

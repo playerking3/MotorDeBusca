@@ -1,3 +1,4 @@
+
 // Ponteiro opaco para a árvore (esconde os detalhes de implementação)
 typedef struct BinaryTree BinaryTree;
 

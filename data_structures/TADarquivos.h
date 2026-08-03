@@ -119,7 +119,7 @@ lS_descritor* readArchive(char* file_name){
     next_word = malloc(sizeof(int)*50);
 
     // Executa para a primeira palavra, caso exista
-    // Do to the first word, if it exist
+    // Do the first word, if it exist
     if(fscanf(file, "%s", next_word) != EOF){
         tokenization(next_word);
         actual = malloc(sizeof(node_string_List));
@@ -131,7 +131,7 @@ lS_descritor* readArchive(char* file_name){
     }
 
     // Executa para as demais palavras do arquivo
-    // Do to another words
+    // Do another words
     while(fscanf(file, "%s", next_word) != EOF){
         tokenization(next_word);
         if(strcmp(before->word, next_word)){

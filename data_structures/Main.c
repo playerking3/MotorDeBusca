@@ -3,6 +3,7 @@
 #include "stack.h"
 #include "queue.h"
 #include <conio.h>
+#include "binaryTree.c"
 
 //  Maximo de palavras diferentes que o sistema pode ler
 //  Max diferrent words than the system suports.
@@ -58,6 +59,35 @@ int getIdFromDictionary(hashNode dictionary[], char* palavra){
 
 
 
+void getAllDocumentsAndMakeTree(archiveWords archives[], BinaryTree* tree, lS_descritor* toCompare){
+    hashNode* auxHashNode;
+    node_string_List* auxStringList;
+    float multiplier = 1;
+    float score;
+    if(tree == NULL)
+        tree = createTree();
+    for(int i = 0; archives[i].name != NULL; i++){
+        score = 0;
+        if(toCompare != NULL){
+            auxStringList = toCompare->head;
+            for(int j = 1; j < (toCompare->Size)+1; j++){
+                auxHashNode = archives[i].first;
+                multiplier = 1;
+                while(auxHashNode != NULL){
+                    if(!strcmp(auxStringList->word, auxHashNode->palavra)){
+                        score += (j/multiplier)*100;
+                    }
+                    auxHashNode = auxHashNode->next;
+                    multiplier++;
+                }
+                auxStringList = auxStringList->next;
+            }
+        }
+        insertInTree(tree, archives[i].name, score);
+    }
+}
+
+
 /*********************************************************/
 /*********************************************************/
 /**                  MAIN FUNCTION                      **/
@@ -97,6 +127,8 @@ int main(){
     processStack = malloc(sizeof(Stack));
     processStack->head = NULL;
     processStack->_size = 0;
+
+    BinaryTree binaryTree;
 
     //  Inicializacao de "processedArchives"
     //  "processedArchives" inicialization
@@ -213,6 +245,25 @@ int main(){
                     printf("Nenhuma palavra associada a este ID!\n");
                 break;
             case 11:            //  Buscar documentos relevantes pelo score
+                bufferStringList->head = NULL;
+                bufferStringList->Size = 0;
+
+                printf("Digite a sequencia de palavras para buscar nos documentos separadas por um espaco:\n");
+
+                do{
+                    scanf("%s", palavra);
+                    tokenization(palavra);
+                    auxNodeStrList = malloc(sizeof(node_string_List));
+                    auxNodeStrList->word = malloc((strlen(palavra)+1)*sizeof(char));
+                    strcpy(auxNodeStrList->word, palavra);
+                    auxNodeStrList->next = bufferStringList->head;
+                    bufferStringList->head = auxNodeStrList;
+                    bufferStringList->Size += 1;
+                }while(!StdinIsEmpty());
+
+                getAllDocumentsAndMakeTree(processedArchives, &binaryTree, bufferStringList);
+                printf("Arvore em ordem:\n");
+                readTreeInOrder(&binaryTree);
                 break;
         }
     }
