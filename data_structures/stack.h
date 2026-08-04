@@ -49,13 +49,12 @@ int stackIsEmpty(Stack _stack){
 /**          Function than push a log based on the
             actual archive and the operation.           **/
 /*********************************************************/
-void stackPush(Stack *_stack, char *requisitor, char *content){
+void stackPush(Stack *_stack, char *content){
 
     //  Cria novo no
     //  Create a new node
     struct StackNode *newNode = malloc(sizeof(struct StackNode));
-    char* aux = malloc(sizeof(char)* (strlen(requisitor) + strlen(content) + 1));
-    strcpy(newNode->content, aux);
+    strcpy(newNode->content, content);
 
     //  Se a pilha estiver vazia, coloca como primeiro
     //  If Stack is empty, then put it in first.

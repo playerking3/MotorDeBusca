@@ -59,13 +59,13 @@ int getIdFromDictionary(hashNode dictionary[], char* palavra){
 
 
 
-void getAllDocumentsAndMakeTree(archiveWords archives[], BinaryTree* tree, lS_descritor* toCompare){
+void getAllDocumentsAndMakeTree(archiveWords archives[], BinaryTree** tree, lS_descritor* toCompare){
     hashNode* auxHashNode;
     node_string_List* auxStringList;
     float multiplier = 1;
     float score;
-    if(tree == NULL)
-        tree = createTree();
+    if(*tree == NULL)
+        *tree = createTree();
     for(int i = 0; archives[i].name != NULL; i++){
         score = 0;
         if(toCompare != NULL){
@@ -83,7 +83,7 @@ void getAllDocumentsAndMakeTree(archiveWords archives[], BinaryTree* tree, lS_de
                 auxStringList = auxStringList->next;
             }
         }
-        insertInTree(tree, archives[i].name, score);
+        insertInTree(*tree, archives[i].name, score);
     }
 }
 
@@ -128,7 +128,7 @@ int main(){
     processStack->head = NULL;
     processStack->_size = 0;
 
-    BinaryTree binaryTree;
+    BinaryTree* binaryTree;
 
     //  Inicializacao de "processedArchives"
     //  "processedArchives" inicialization
@@ -170,11 +170,11 @@ int main(){
                 break;
             case 4:     // Processar proximo documento
                 nextDocument = fileDequeue(documentsQueue);
-                stackPush(processStack, nextDocument, " - Arquivo desenfileirado!\n");
+                stackPush(processStack, "Arquivo desenfileirado!\n");
 
                 bufferStringList = readArchive(nextDocument);
                 if(bufferStringList != NULL){
-                    stackPush(processStack, nextDocument, " - Arquivo lido!\n");
+                    stackPush(processStack, "Arquivo lido!\n");
 
                     processedArchives[numberOfArchive].name = nextDocument;
                     processedArchives[numberOfArchive].first = NULL;
@@ -188,13 +188,13 @@ int main(){
                         auxNodeStrList = auxNodeStrList->next;
                         insertWordDictionary(globalDictionary, auxHashNode->idGlobal, *auxHashNode);
                     }
-
-                    stackPush(processStack, nextDocument, " - Palavras inseridas na tabela Hash\n\0");
-                    stackPush(processStack, nextDocument, " - Palavras inseridas na lista do arquivo\n\0");
-                    stackPush(processStack, nextDocument, " - Documento finalizado!\n\0");
+                    stackPush(processStack,"Palavras inseridas na tabela Hash\n\0");
+                    stackPush(processStack,"Palavras inseridas na lista do arquivo\n\0");
+                    stackPush(processStack,"Documento finalizado!\n\0");
                     printf("Documento \"%s\" processado!\n", processedArchives[numberOfArchive].name);
+                    numberOfArchive++;
                 } else{
-                    stackPush(processStack, nextDocument, " - Erro com o documento");
+                    stackPush(processStack, "Erro com o documento");
                     printf("Erro com o documento!\n");
                 }
                 break;
@@ -260,10 +260,10 @@ int main(){
                     bufferStringList->head = auxNodeStrList;
                     bufferStringList->Size += 1;
                 }while(!StdinIsEmpty());
-
                 getAllDocumentsAndMakeTree(processedArchives, &binaryTree, bufferStringList);
                 printf("Arvore em ordem:\n");
-                readTreeInOrder(&binaryTree);
+                readTreeInOrder(binaryTree);
+                freeTree(&binaryTree);
                 break;
         }
     }

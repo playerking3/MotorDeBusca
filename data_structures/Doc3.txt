@@ -1,0 +1,26 @@
+Apple has filed a new legal challenge against the U.K. government’s latest attempt to gain access to users’ encrypted data, the U.S. tech giant confirmed to AFP on Monday.
+
+The dispute stems from a U.K. government demand that Apple create a “backdoor” to let authorities snoop on data uploaded by Apple users if required, for example by law enforcement agencies.
+
+“As we have said many times before, we have never built a backdoor or master key to any of our products or services and we never will,” Apple said in a statement from September, re-shared with AFP on Monday.
+
+An Apple spokesperson confirmed the legal appeal, first reported by the Financial Times, but declined to comment further.
+
+The UK government did not immediately respond to a request for comment.
+
+U.S. media reported last year that the UK had requested access to encrypted data uploaded by any Apple user around the world.
+
+
+The demand sparked tensions between London and Washington, ultimately prompting the U.K. to drop its request for global access, then-U.S. intelligence chief Tulsi Gabbard said on X in August 2025.
+
+The FT reported in October that London had instead requested Apple for access to its British users’ encrypted data – the focus of Apple’s latest legal challenge.
+
+Many tech platforms pride themselves on being able to guarantee privacy through encryption of messages and other content, and providing access to law enforcement has long been seen as off-limits.
+
+Apple stopped offering its most advanced encryption feature – known as Advanced Data Protection – for British users in February 2025.
+
+ADP ensures that only account holders can view content such as photos and documents stored in the cloud through end-to-end encryption.
+
+Police officials worldwide say encryption can shield criminals, terrorists and pornographers from prosecution even when authorities have a legal warrant for an investigation.
+
+But civil rights and privacy advocates, along with many cybersecurity professionals, praise data encryption as a way to protect against wrongful snooping by authorities as well as hackers.

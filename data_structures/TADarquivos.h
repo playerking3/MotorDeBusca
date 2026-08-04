@@ -180,8 +180,9 @@ archiveWords* findLastArchive(archiveWords words[]){
 /*********************************************************/
 void insertArchiveList(archiveWords archives[], archiveWords* words){
     static int index = 0;
-    if(index < MAX_TO_PROCESS)
-        archives[index] = *words;
+    if(index < MAX_TO_PROCESS){
+        archives[index++] = *words;
+    }
 }
 
 

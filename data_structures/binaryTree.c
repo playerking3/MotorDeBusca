@@ -76,13 +76,15 @@ void freeNode(ArvoreNode *atual){
         freeNode(atual->esquerda);
         freeNode(atual->direita);
         free(atual);
+        atual = NULL;
     }
 }
 
-void freeTree(BinaryTree *arvore) {
+void freeTree(BinaryTree **arvore) {
     if (arvore != NULL) {
-        freeNode(arvore->raiz);
-        free(arvore);
+        freeNode((*arvore)->raiz);
+        free(*arvore);
+        *arvore = NULL;
     }
 }
 
