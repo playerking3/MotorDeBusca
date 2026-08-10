@@ -115,7 +115,7 @@ hashNode* insertHashTable(char *palavra, HashTable* _hash){
         //  Caso contrario, cria o no e inicializa as informacoes dele
         //  Else, creates a node and inicilizes the informations
         newNode = malloc(sizeof(hashNode));
-        newNode->palavra = malloc(sizeof(char)*strlen(palavra));
+        newNode->palavra = malloc(sizeof(char)*(strlen(palavra)+1)); // +1 para o '\0'
         strcpy(newNode->palavra, palavra);
         newNode->frequencia = 1;
         newNode->idGlobal = globalId++;

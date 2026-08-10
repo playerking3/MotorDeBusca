@@ -1,26 +1,248 @@
-Apple has filed a new legal challenge against the U.K. government’s latest attempt to gain access to users’ encrypted data, the U.S. tech giant confirmed to AFP on Monday.
+# Info da Campanha
+Nome: Escuridão sem fim
+Baseado na campanha Fora do Abismo
 
-The dispute stems from a U.K. government demand that Apple create a “backdoor” to let authorities snoop on data uploaded by Apple users if required, for example by law enforcement agencies.
+# Capítulo 1
+Os aventureiros sucumbiram a um destino terrível: foram capturados pelos **drows** (elfos negros) em um saque, deixados inconscientes por veneno e arrastados para as profundezas do **Subterrâneo**. Eles agora se encontram longe da luz do sol, em um posto avançado chamado **Velkynvelve**, sob a guarda da cruel sacerdotisa **Ilvara da Casa Mizzrym**, que exige obediência absoluta sob a ameaça de seu chicote.
+## Posição Inicial
+Os personagens começam a aventura na **cela de escravos de Velkynvelve**. Suas condições iniciais são extremamente limitadas:
 
-“As we have said many times before, we have never built a backdoor or master key to any of our products or services and we never will,” Apple said in a statement from September, re-shared with AFP on Monday.
+- **Equipamento:** Eles foram **despidos de tudo**, exceto de suas roupas de baixo.
+- **Restrições Físicas:** Estão acorrentados e algemados com metal frio e pesado.
+- **Companhia:** Eles não estão sozinhos; dividem a cela com outros **dez prisioneiros PdMs**.
+- **Magia:** A cela possui um efeito de **antimagia**, impedindo qualquer conjuração enquanto estiverem presos.
 
-An Apple spokesperson confirmed the legal appeal, first reported by the Financial Times, but declined to comment further.
+## Objetivo Principal
 
-The UK government did not immediately respond to a request for comment.
+O objetivo dos jogadores neste capítulo é claro: **escapar do posto avançado de Velkynvelve.**
 
-U.S. media reported last year that the UK had requested access to encrypted data uploaded by any Apple user around the world.
+Embora a fuga seja a prioridade imediata, o desafio é ampliado pela falta de conhecimento dos arredores. Uma vez fora da cela, eles precisam decidir **para onde ir** no labirinto de túneis do Subterrâneo e como obter os recursos necessários para sobreviver à jornada de volta à superfície. A fuga bem-sucedida concede ao grupo uma recompensa especial de **150 EXP**.
 
+## Personagens encontrados
+### Players:
+#### BerserK: 
+Dias preso: 10 + 18
+#### Matts: Caelion Thorne
+Dias preso: 8 10
+#### Souza: Stik Herderaad
+Dias preso : 10
+#### Haya: Hissa
+Dias preso: 9 + 3
+#### ZHGames: Vis Aestus
+Dias preso: 4 + 10
+### Na cela:
+#### Buppido
+Raça: Derro.
 
-The demand sparked tensions between London and Washington, ultimately prompting the U.K. to drop its request for global access, then-U.S. intelligence chief Tulsi Gabbard said on X in August 2025.
+**Personalidade**:
+Buppido é surpreendentemente sociável a comunicativo, demonstrando uma mente afiada e maneiras desarmantes. Buppido secretamente acredita que ele é a encarnação viva do deus derro Diinkarazan – um avatar do assassinato oferecendo sacrifícios de sangue para criar um caminho de carnificina através do Subterrâneo para que seu povo possa seguir à glória. Ele racionaliza quaisquer contratempos (incluindo sua captura e aprisionamento) como parte de seus “planos divinos”.
 
-The FT reported in October that London had instead requested Apple for access to its British users’ encrypted data – the focus of Apple’s latest legal challenge.
+Por acreditar ser seu próprio deus, ele está convencido que não pode ser morto (ou ao menos de que a morte de sua forma mortal não significa nada para ele), logo, ele é completamente destemido. Ele assume que tudo é parte de seu plano divino, e participa entusiasmado de qualquer conluio para escapar dos drows, de modo que ele possa continuar seu trabalho sagrado. 
 
-Many tech platforms pride themselves on being able to guarantee privacy through encryption of messages and other content, and providing access to law enforcement has long been seen as off-limits.
+Buppido está satisfeito em considerar seus colegas de cela como aliados até que chegue o momento em que ele não precise mais deles, ou até que ele se convença de que os agouros apontam que um ou mais deles precisem ser sacrificados para sua glória.
 
-Apple stopped offering its most advanced encryption feature – known as Advanced Data Protection – for British users in February 2025.
+**Falas padrão:**
+- "Não se preocupem, meus caros. As correntes são apenas metal frio, mas nossa vontade é o que realmente nos libertará deste lugar."
+- "Vocês demonstram uma resiliência admirável. É um prazer estar em companhia tão... promissora."
+- "Sempre há uma saída para quem sabe observar os padrões do mundo. Eu garanto a vocês, nada aqui acontece por acaso."
+-  "Este lugar... esta umidade e escuridão... são perfeitos para o que está por vir. Tudo faz parte de um desenho muito maior."
+- "Não temam os chicotes de Ilvara. Eles são meros instrumentos para testar nossa... ou melhor, a _minha_ determinação."
+-  "Às vezes, um sacrifício é necessário para que o caminho se abra. A questão é saber quem terá a honra de ser a oferenda."
 
-ADP ensures that only account holders can view content such as photos and documents stored in the cloud through end-to-end encryption.
+**Informações sigilosas:**
+- Pode ser questão de dias ou semanas até que um contingente vindo de Menzoberranzan chegue para levar os prisioneiros para a cidade drow.
+#### Príncipe Derendil
+**Raça**: Quaggoth;
 
-Police officials worldwide say encryption can shield criminals, terrorists and pornographers from prosecution even when authorities have a legal warrant for an investigation.
+**Descrição física:**
 
-But civil rights and privacy advocates, along with many cybersecurity professionals, praise data encryption as a way to protect against wrongful snooping by authorities as well as hackers.
+**Personalidade:** 
+ Se algum dos personagens falar com ele, no entanto, o quaggoth responde em élfico urbano. Ele explica que ele não é, de fato, um quaggoth, mas um príncipe dos elfos dourados transformado em um quaggoth por uma maldição. Ele clama ser o príncipe Derendil do reino de Nelrindenvane, na Floresta Alta.
+ 
+Embora Derendil se comporte como o nobre príncipe que ele acredita ser, ele responde ao estresse – e particularmente às ameaças – como um quaggoth: violentamente arrancando membro por membro de seus inimigos e rasgando sua carne com dentes e garras afiadas. Ele volta a si somente após a batalha, ou quando alguém reforça sua “verdadeira identidade” para despertá-lo
+
+Na verdade, Derendil está simplesmente louco, tocado pelas ilusões do demônio Fraz-Urb’luu. O reino de Nelrindenvane não existe, e todas as lembranças e personalidade de “Derendil” são uma ilusão criada pelo Príncipe Demônio da Enganação. O quaggoth se recusa a acreditar na verdade, e qualquer evidência incontroversa de sua real natureza faz com que ele se lance em uma fúria assassina.
+
+**Falas padrão:**
+- "Saudações, viajantes. Peço desculpas por minha aparência... pouco convencional. Sou o Príncipe Derendil, do reino de Nelrindenvane, na Floresta Alta."
+- "Este cárcere é um insulto à minha linhagem. O mago Terrestor pagará caro por ter me usurpado e me lançado nesta forma bestial."
+- "Sinto falta das brisas da Floresta Alta e do brilho do sol nas folhas prateadas. O Subterrâneo é um lugar de uma feiura insuportável para alguém de minha estirpe."
+- "Embora meus dedos sejam agora garras, meu coração ainda bate com o ritmo da realeza elfa. Jamais me esquecerei de quem sou."
+- "COMO OUSAM? Olhem para mim! Vejam a nobreza em meus olhos! Nelrindenvane é real, e qualquer um que diga o contrário deve morrer!"
+
+**Informações sigilosas:**
+- A cela tem algum tipo de efeito antimagia nela.
+#### Eldeth Feldrun
+**Raça**: Anã Batedora;
+
+**Descrição física:**
+
+**Personalidade:** 
+Eldeth é animada e orgulhosa tanto de sua linhagem como da conquista de seu povo em recuperar o antigo reino anão; ela sugere Gauntlgrym como o caminho para escapar do Subterrâneo. Eldeth é teimosa e odeia os drows e todos os outros “corruptos seres da escuridão”, como os derros e os duergars.
+
+Eldeth quer voltar para seu lar, mas também é desafiadora e tem a tendência de sacrificar-se pelos outros – e, logo, está dentre os prisioneiros com a maior chance de perecer antes de ter essa oportunidade.
+
+**Falas padrão:**
+- Vocês já ouviram falar de Gauntlgrym? É o coração de ferro do Norte! Meu povo sangrou para retomá-la, e não é uma cela drow que vai me manter longe daqueles salões!"
+- "Eu sou uma Feldrun! Minha linhagem é forjada na rocha e temperada no fogo. Se buscamos um caminho para a liberdade, o caminho é Gauntlgrym!"
+- "O sol na superfície é bom, mas o brilho das forjas de Gauntlgrym... ah, isso sim é beleza de verdade."
+- (Para um guarda drow): "Pode me bater, elfo! Cada cicatriz que você me dá é uma dívida que meus parentes cobrarão com juros de aço quando eu sair daqui!"
+- "Não se preocupem comigo, cuidem dos feridos. Eu já aguentei pancadas piores de trolls nas montanhas."
+
+**Informações sigilosas:**
+- Três guardas drows vigiam a cela de escravos da torre suspensa após a ponte de corda, visível através do portão trancado.
+#### Jimjar
+**Raça**: Gnomo (espião);
+
+**Descrição física:**
+
+**Personalidade:** 
+Jimjar é um desprezível ladino com uma atitude insubordinada, um carinho por moedas, e uma obsessão em apostar em praticamente tudo e qualquer coisa. Uma vez que ele conheça os personagens, Jimjar regularmente oferece a eles apostas em coisas a partir desde seus próprios esforços (“eu aposto dez peças de ouros que você não consegue passar por aquela sentinela sem ser visto”) até resultados de eventos aleatórios (“eu aposto vinte peças de ouros que esse túnel é o caminho correto”).
+
+Jimjar é sempre fiel à sua palavra, e mantém o registro exato de seus débitos e créditos na sua cabeça, pagando suas apostas (ou exigindo pagamento) tão cedo quanto possível. Ele não se considera superior para não embolsar algumas moedas extras quando ninguém está olhando, e tem uma incrível habilidade de esconder riqueza em si.
+
+**Falas padrão:**
+- Apostas contínuas com os jogadores
+
+**Informações sigilosas:**
+- Jorlan, o drow guerreiro, recentemente sofreu ferimentos que o desfiguraram. Antes disso, ele parecia estar mais nas graças de Ilvara. Agora Shoor parece ter tomado seu lugar.
+#### Ront
+**Raça**: Orc Escudo de gelo;
+
+**Descrição física:**
+
+**Personalidade:** 
+Ront fugiu do massacre de um bando de orcs pelas mãos dos anões, caindo em uma fenda e perambulando pelo Subterrâneo antes de ser capturado pelos drows. Ele está envergonhado de seu ato de covardia e sabe que Gruumsh, o deus dos orcs, está punindo-o. Contudo, ele não quer morrer, ao menos não como um prisioneiro dos drows. 
+
+Ront é perverso, estúpido e odioso, mas é submisso perante autoridade e ameaças. Ele nutre um ódio especial por Eldeth, uma vez que suas tribos estão em guerra. Ront adota um comportamento ameaçador e de valentão em relação aos outros prisioneiros a não ser que alguém o enfrente.
+
+**Falas padrão:**
+- "O que você olha? Quer que Ront esmague sua cara no chão de pedra?"
+- "O cheiro de anã me dá nojo. Eldeth devia ter morrido com os outros na montanha."
+- (Se um jogador o enfrentar e vencer): "Você... forte. Ront respeita força. Não batam mais. Ront segue vocês."
+
+**Informações sigilosas:**
+Nenhuma
+#### Sarith Kzekarit
+**Raça**: Drow;
+
+**Descrição física:**
+
+**Personalidade:** Sarith é mal-humorado e reservado, rejeitando tentativas de diálogo. Sarith é acusado de assassinar um de seus companheiros drows guerreiros em um acesso de loucura, mas não tem nenhuma memória do evento. Ele varia entre achar que tudo é uma armação feita para desacreditá-lo e destruí-lo, e o medo de que seja tudo verdade – o que, de fato, é.
+
+Fato desconhecido até mesmo para os outros drows, Sarith está infectado com esporos contaminados dos miconides corrompidos por Zuggtmoy, a Rainha Demoníaca dos Fungos. A infestação inicial dos esporos causou o ataque de loucura de Sarith, e sua saúde e sanidade continuam a deteriorar conforme os esporos crescem em seu cérebro.
+
+**Falas padrão:**
+Qualquer interação deve ser feita com um teste de Persuasão:
+CD <5 - É extremamente grosseiro
+CD 5 - Responde de forma rude e apenas respostas simples
+CD 10 - Responde de forma neutra
+CD 15 - Responde de forma amigavel
+
+**Informações sigilosas:**
+(É necessário um teste de Persuasão com CD 20)
+• Um limo cinzento vive no lago. Ele é inofensivo, se alimentando do lixo a menos que seja perturbado. 
+• Uma patrulha de suprimento vinda de Menzoberranzan está alguns dias atrasada, o que é incomum.
+#### Shuushar, o Desperto
+**Raça**: kuo-toa;
+
+**Descrição física:**
+
+**Personalidade:** Shuushar é provavelmente uma das criaturas mais incomuns que qualquer um dos aventureiros já encontrou. O ermitão aquático é uma presença calma e pacífica. Ele tem consciência da reputação merecida de seu povo pela loucura, e clama ter passado uma vida inteira em contemplação e meditação solitária para superar essa herança.
+
+Embora Shuushar seja de longe o mais sensato, estável e honesto dentre os companheiros de cela dos aventureiros, ele também é o mais inútil para seus objetivos imediatos. O kuo-toa eremita é um pacifista total. Ele não luta ou machuca nenhuma outra criatura, chegando até a recusar-se a defender a si ou outros. Ele fica feliz em acompanhar o grupo, se assim permitido, ajudando-os da forma que puder sem que isso viole seu voto mais sagrado.
+
+**Falas padrão:**
+- "Não permitam que o metal frio das correntes perturbe o lago de suas mentes. Este aprisionamento **é o que é**, e quem pode dizer a que fim ele eventualmente nos levará?"
+- "A vida é como as correntes do Lago Escuro: às vezes subimos, às vezes descemos, mas a água sempre encontra seu caminho. Devemos apenas fluir."
+- "Passei muitos ciclos em silêncio para superar a herança de loucura do meu povo. A paz não é a ausência de correntes, mas a quietude dentro do coração."
+- "Vocês buscam a liberdade através do conflito, mas a violência é apenas outra forma de loucura. Eu me recuso a defender até a mim mesmo, pois a paz é meu voto mais sagrado."
+
+**Informações sigilosas:**
+- Há dezenove drows no posto avançado, incluindo Ilvara, Shoor, e Jorlan, assim como outra sacerdotisa chamada Asha. Há também uma dúzia de quaggoths e algumas aranhas gigantes.
+#### Stool
+**Raça**: miconide broto;
+
+**Descrição física:**
+
+**Personalidade:**  Stool está sozinho e assustado, querendo apenas retornar para seu lar no Bosque Nunca Claro. Se virar amigo dos personagens, Stool fica feliz em guiá-los até sua casa, prometendo a eles refúgio com seu povo, embora ele não esteja consciente dos perigos oferecidos pela influência de Zuggtmoy sobre os miconides.
+
+Stool utiliza esporos harmoniosos para estabelecer comunicação telepática com outras criaturas, e faz isso para se comunicar com personagens que sejam gentis e amigáveis com ele. O miconide também ajuda a estabelecer comunicação com habitantes do Subterrâneo com quem os personagens não compartilhem uma linguagem. Uma vez que ele se apegue a um ou mais aventureiros, Stool se comporta como um irmão mais novo entusiasmado e curioso, ficando próximo dos personagens e fazendo todo tipo de perguntas.
+
+**Falas padrão:**
+
+**Informações sigilosas:**
+- Jorlan costumava ter uma varinha que lança globos de um material pegajoso capaz de prender seu alvo. Agora Shoor a carrega, outro sinal da mudança de status.
+
+#### Topsy e Turvy
+**Raça**: homens-rato;
+
+**Descrição física:**
+
+**Personalidade:** Gnomos das profundezas gêmeos, Topsy e seu irmão Turvy são originalmente da Pedra do Massacre do Refúgio, no Subterrâneo. Eles foram capturados pelos drows enquanto tinham saído para coletar cogumelos nos túneis perto de sua casa. 
+
+Topsy é de longe a mais sociável dos dois. Turvy constantemente resmunga e murmura sombriamente, com Topsy repetindo ou traduzindo o que seu irmão diz. Topsy e Turvy escondem o fato de que são homens-rato. Infectados com a maldição da licantropia, nenhum dos dois a abraçou completamente até agora, e lutam para controlar seus instintos e impulsos de homem-rato. 
+
+Eles estão temerosos do que os potenciais aliados podem fazer se descobrirem a verdade, e estão cuidando um do outros e de sua própria sobrevivência. Com suas transformações controladas apenas pelo ciclo da lua não vista, você pode utilizar a transformação iminente como um coringa nesta aventura. Eles são prisioneiros por menos de um mês, o que significa que a lua cheia está a caminho.
+
+**Falas padrão:**
+
+**Informações sigilosas:**
+- Pode ser questão de dias ou semanas até que um contingente vindo de Menzoberranzan chegue para levar os prisioneiros para a cidade drow.
+
+### Drows
+A guarnição em Velkynvelve consiste de doze drows, cinco drows guerreiros de elite, uma sacerdotisa iniciante chamada Asha (utilize o bloco de status do sacerdote no Manual dos Monstros, mas acrescente a Linhagem Feérica, Conjuração Inata, e a Sensibilidade à Luz Solar do bloco de estatísticas dos drows), e a comandante do posto avançado, a drow sacerdotisa de Lolth veterana chamada llvara. Os drows tem o auxílio de uma matilha de doze quaggoths e seis aranhas gigantes treinadas.
+
+#### Ilvara Mizzrym
+A comandante de Velkynvelve é uma ambiciosa sacerdotisa drow procurando ascender na estima de Lolth e sua causa. Ela considera o comando de um mero posto avançado uma pedra de apoio na sua escalada. O posto avançado está abaixo dela, e ela o trata e a seus prisioneiros com desprezo. Contudo, ela sabe que essa posição é temporária, e pretende espremer cada vantagem dela nesse meio tempo. 
+
+Ilvara é uma senhora cruel que se diverte provocando e atormentando seus inimigos e subalternos da mesma maneira. Em adição ao chicote, ela carrega um bastão do tentáculo. Embora ela tenha tomado Shoor Vandree como seu amante, Ilvara não se importa com ele mais do que se importava com Jorlan Duskryn, o amante que ela descartou devido aos seus ferimentos incapacitantes.
+
+#### Asha Vandree
+Uma sacerdotisa drow iniciante sob a tutela de Ilvara, Asha inicialmente considerou Ilvara como um exemplo a ser seguido. Isso mudou depois que ela viu como Ilvara tratou Jorlan Duskrym, um drow guerreiro veterano que era o amante de sua comandante até que se feriu gravemente. Ilvara descartou Jorlan sem pensar duas vezes, demonstrando para Asha a tolice que era esperar por algum tipo de recompensa por sua lealdade.
+
+Asha é ambiciosa o suficiente para entender que ela teria chances de assumir o comando do posto avançado, caso alguma coisa acontecesse a llvara, mas não é corajosa o suficiente para desafiar sua superior abertamente.  Asha age com cautela. alimentando as chamas de ódio de Jorlan, e mantendo suas próprias mãos limpas de qualquer conspiração.
+
+#### Shoor Vandree
+Este guerreiro de elite drow assumiu o papel de tenente e amante de Ilvara após os ferimentos sofridos por seu predecessor, Jorlan Duskrym. Shoor é relativamente novo e bem arrogante para um drow macho, orgulhoso de suas habilidades e conquistas.
+
+Ainda inseguro em sua posição, Shoor sente a necessidade de demonstrar suas habilidades e eficiência para sua senhora e de encontrar maneiras de agradá-la.
+
+#### Jorlan Duskryn
+Jorlan transformou seu talento de inflingir dor em uma habilidade de guerreiro, e certo charme gatuno como forma de cair nas boas graças de suas superiores fêmeas. Ele rapidamente se tornou útil para Ilvara Mizzrym e, como seu amante, aproveitou todos os benefícios que ambos as posições traziam.
+
+**Jorlan Duskryn**, um guerreiro drow outrora belo e favorito de **Ilvara**, foi permanentemente desfigurado e mutilado pelo ácido de um pudim negro, o que resultou em sua substituição cruel por **Shoor Vandree** tanto na hierarquia militar quanto no leito da sacerdotisa. Amargurado e sentindo-se descartado, ele agora nutre um **ódio mortal** por ambos, dedicando-se inteiramente a arquitetar uma vingança que os leve à destruição junto com ele.
+
+Jorlan sabe muito bem que a simpatia da sacerdotisa Asha para com ele é uma tentativa de manipulá-lo. Contudo, ele está satisfeito em entrar em seu jogo por enquanto, na esperança de atrair Asha para perto o suficiente e, potencialmente, utilizá-la contra Ilvara quando chegar a hora certa.
+
+Devido aos seus ferimentos, Jorlan tem desvantagem em suas jogadas de ataque, testes de Destreza e testes de resistência de Destreza.
+
+## Inicio da campanha
+>A última coisa de que vocês se lembram é do cheiro acre do veneno **drow** e do mundo girando em um borrão antes de tudo apagar. Agora, o despertar é um choque de realidade cruel e gélido.
+>
+>Vocês estão trancados em uma cela úmida e abafada, escavada diretamente na rocha viva de uma caverna colossal. O chão de pedra onde vocês estão deitados é duro e implacável; não há camas, mantas ou qualquer conforto. O ar é pesado, carregado com o odor metálico do sangue e o fedor vindo de penicos de barro nos cantos da cela.
+>
+>A sensação de perda é física. Vocês foram **despidos de tudo**, exceto de suas roupas de baixo. O peso do metal é constante: **colares de ferro** apertam suas gargantas, conectados por correntes curtas a algemas em seus punhos e a cintos pesados na cintura. Para os conjuradores entre vocês, há um vazio perturbador: o ar na cela parece 'morto' devido a uma **proteção mágica** que impede qualquer centelha de magia de se manifestar.
+>
+>Através do pesado portão de ferro parafusado na pedra, vocês vislumbram o posto avançado de **Velkynvelve**. Lanternas contendo fungos fosforescentes emitem uma iluminação pálida de penumbra, revelando passarelas e pontes de corda de seda de aranha suspensas a 30 metros acima do chão da caverna. O som constante de uma cachoeira próxima preenche o ambiente, anulando os ecos da caverna e isolando vocês em seu próprio desespero.
+>
+>Ao seu redor, nas sombras da cela, outras dez figuras se movem — **companheiros prisioneiros** de diversas raças, todos aguardando para serem transportados para a terrível cidade de Menzoberranzan. A voz da sacerdotisa **Ilvara** ecoa na memória de vocês como um chicote: _'Aceite seu destino, aprenda a obedecer, e você talvez sobreviva'_.
+>
+>O sol é agora apenas uma lembrança distante. A sobrevivência começa agora.
+
+## Batalha
+Mats
+Drow1 - Morto
+Haya +100 xp
+Brerserk + 200xp
+drow2 Escuridão - Morto
+drow elite - Morto
+Sarith
+Gnomo -6 Morrendo
+
+## Batalha 2
+
+Souza
+Drow 3hp
+Zh + 100hp
+Eldrith

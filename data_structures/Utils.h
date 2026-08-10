@@ -25,6 +25,7 @@ int MainMenu(){
     printf("09 - Buscar ID de uma palavra;\n");
     printf("10 - Visualizar palavra pelo ID global;\n");
     printf("11 - Buscar documentos relevantes pelo Score;\n");
+    printf("12 - Sair;\n");
     printf("-==================================================-\n");
 
     scanf("%d", &ret);

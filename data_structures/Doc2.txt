@@ -1,19 +1,37 @@
-Profits at BP have surged to the highest since 2022 after the war in the Middle East pushed up oil prices.
+# Unidade Lógica e Aritmética
+A unidade lógica e aritmética é uma das partes principais de um computador, pois é o local que os dados são processados. A ULA recebe os dados, executa uma ação lógica ou aritmética e retorna o resultado final.
 
-The oil giant reported a profit of $5.73bn (£4.26bn) between April and June. That was more than double the $2.35bn made a year earlier and the highest quarterly profit since 2022 when the Russia-Ukraine war began.
+### Controle Hardwired
+A unidade de controle hardwired gera as microinstruções a partir de circuitos sequenciais, isto é, as instruções são implementadas em hardware selecionadas por meio de um decodificador. Isso faz com que a complexidade do controlador seja aumentada, pois instruções complexas devem ser "escritas" de maneira física através de portas lógicas. Por ouro lado, essa solução normalmente é a mais rápida para a decodificação de instruções.
+### Controle micro programado 
+As instruções à serem decodificadas estão salvas dentro de uma memória ROM, chamada de memória de controle, em que seu conteúdo é composto pelas micro instruções que o computador vai utilizar. Essa abordagem facilita a escrita de instruções complexas, pois seu conteúdo fica guardado em uma memória dedicada, não aumentando a complexidade do hardware que vai vai fazer o acesso, no entanto é mais lenta pois o controlador deve fazer a busca nessa memória. 
+# Acumulador
+O acumulador é um tipo de registrador que armazena o resultado do processamento realizado pela ULA. Após o acumulador, os dados serão enviados para o dispositivo de saída do computador. 
+# Registrador de Dados de Memória
+Armazena de forma temporária os dados e o código do comando a serem enviados para a ULA. A quantidade de bits que esse registrador consegue armazenar está limitado ao barramento de dados do processador
+# Registrador de Endereços de Memória
+Armazena, também de forma temporária um endereço de acesso a uma posição da memória do computador, essa memória pode ser RAM ou ROM.
+# Memória
+Mesmo fora da CPU, a memória é essencial para o funcionamento do computador, pois tanto os dados quanto as instruções estão presentes na memória. Seus dados são acessados por endereços presentes no MAR
+# Contador de Instruções
+O IC te, trabalha com o sequenciamento das instruções que vão ser enviadas para a CPU, ele registra  incrementa endereços de memória que contém as instruções do programa e envia para o MAR.
+# Reset
+O Reset, 
 
-The price of crude oil has jumped since the outbreak of the Iran war earlier this year due to major disruption to global supplies of oil and gas through the Strait of Hormuz.
+# Clock
+O Clock do computador é o que define o tempo de execução das instruções e a sincronia dos componentes internos do computador. 
 
-Environmental and poverty campaigners blasted BP for "profiteering" off skyrocketing oil prices.
+É importante não confundir o clock com o ciclo do computador, pois o ciclo é composto de varios ciclos do clock
 
-Crude oil prices shot up after the outbreak of conflict in the Middle East, which in turn pushed up petrol and diesel prices and domestic energy costs around the world.
+# Barramentos
+O barramento é em geral o caminho que os dados trafegam até chegar em um componente 
+interno ou externo da CPU, é o barramento que determina a quantidade e o fluxo dos dados dentro de um computador. Existem três tipos de barramentos que serão explicados a diante:
 
-BP said Brent crude – the global benchmark for oil prices – averaged $103.85 a barrel in the April-to-June quarter, up from $67.88 in the same period last year.
+## Barramento de dados
+Faz o papel de interligar o MDR com a memória principal para a transferência de instruções ou dados a serem executados.
 
-The rise in the oil price has benefited all energy companies, not just BP, with rival Shell also reporting a doubling in quarterly profits last week.
+## Barramento de endereços
+Interliga o MAR à memória principal, sendo responsável pelo trafego dos endereços de memória requisitados pela CPU até a memória.
 
-On Monday, US President Donald Trump said American oil firms ExxonMobil and Chevron were "making too much money".
-
-He told reporters: "I don't like it, and I should be the last one to say because I'm a big free enterprise guy.
-
-"They ought to give some of that back to the public, and they better cut the retail price, the consumer price."
+## Barramento de sinais de controle
+Envia e recebe sinais entre a CPU e os demais componentes do sistema computacional, como dispositivos de entrada e saída.

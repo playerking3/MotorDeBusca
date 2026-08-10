@@ -1,33 +1,214 @@
-More than 150 migrants have been rescued after the boat they were using to cross the Channel caught fire on Tuesday morning, French authorities have said.
+# Notas de aula
+>P1 - 29/04
+>P2 - 17/06
+>SUB - 24/06
+# Paradigma de Orientação a Objetos
+A orientação a objetos teve como inspiração a microbiologia, visto que nos organismos a menor parte divisível é a célula, que possui estados e comportamentos. portanto foi baseado nessas ideias de simplificação do código que foi criado o paradigma.
 
-The boat was attempting to cross to the UK when its engine caught fire, according to the French maritime prefecture of the Channel and North Sea.
+A orientação a objetos é dividida em quatro pilares: 
+- Abstração
+- Encapsulamento
+- Herança
+- Polimorfismo
 
-It said 157 people have been rescued and are being taken to port in Boulogne-sur-Mer. There are no reports of anyone having been injured or killed.
+Todos esses pilares conversam entre si e trabalham em conjunto para que a orientação a bojetos possa funcionar.
 
-It comes just a day after Prime Minister Andy Burnham pledged his government will be "relentless" in curbing the number of people arriving in the UK on small boats.
+## Abstração
+O conceito de abstração consiste na habilidade de avaliar um problema e concentrar apenas nos aspectos essenciais dele, ignorando partes menos essenciais, com a ideia chave de mostrar o que é realmente relevante para o problema.
 
-French authorities said the boat left France on Monday night.
+Na orientação a objetos a abstração é aplicada com o conceito de classes, que são um "molde" ou um modelo a partir do qual são criadas instancias (objetos). As classes são compostas por:
+### Atributos
+São os estados da classe, isto é, um conjunto de variáveis que representam os dados como características do objeto. É importante ressaltar que dentro da classe os atributos são abstratos e não possuem um valor concreto.
+### Métodos
+São as funções da classe. Em geral é o processo em que os atributos são manipulados, logo os métodos são o que ditam o comportamento da classe e subsequentemente os objetos dessa classe. 
+### Objetos
+São a representação física da classe. Como realmente um objeto na vida real é baseado em um molde, porém tem suas características únicas que o diferenciam de outro objeto do mesmo molde.
 
-Overnight "five people on board the vessel required rescue... the remaining people on board refused the assistance offered by the French patrol boats", the French maritime prefecture said.
+Na computação, os objetos que são instanciados da mesma classe possuem os mesmos métodos e atributos, porém os valores em si podem ser diferentes entre os objetos.
 
-"Determined to reach the United Kingdom, migrants crossing the Channel in small boats refused assistance offered by French emergency service, accepting it only in situations of extreme emergency," it said in a statement.
+### Exemplo prático
+``` Java
+public classs Aviao{
+	public int qtdPoltronas;
+	public String codigoMotor;
+	public float peso;
+	
+	public void voar(){
+		System.out.println("Aviao voando...");
+	}
+	
+	public void exibirPeso(){
+		System.out.println("O peso do aviao é: "+this.peso+"Kg");
+	}
+}
 
-Because of the "structural fragility" of boats used to cross the Channel, it said they decided not to intervene further at that stage.
+public class App{
+	public void main(string[] args){
+		Aviao boeing747 = new Aviao();
+		boeing747.codigoMotor = "Rolls-Royce";
+		Aviao airbusA320 = new Aviao();
+		airbusA320.motor = "Mercedes-Benz";
+	}
+}
+```
 
-But this morning the engine caught fire and the "vessel's integrity deteriorated very rapidly".
+No exemplo acima, é criada a classe ``Aviao`` como um molde de todos os aviões, isto é, todos os aviões tem as características descritas na classe
 
-Rescue boats went to the scene from France and the UK, including the RNLI Eastbourne lifeboat and the UK Border Force vessels BSC Contender and BSC Courageous.
+Na classe ``App`` são instanciados dois objetos da classe `Aviao`. Notemos que ambos tem o atributo ``motor``, porém o conteúdo de cada um é único. Da mesma forma, ao executar o método `exibirPeso` o comportamento de exibir o peso é o mesmo para todos os aviões, porem o peso em si deles poderá ser diferente.
 
-Two French boats rescued 103 migrants and the British boats rescued 54.
+## Encapsulamento
+O conceito de encapsulamento está muito ligado a palavra sem si, encapsular é envolver algo com a intenção de proteger esse algo. Na programação orientada a objetos é importante proteger os atributos de uma classe para que eles não sejam alterados de forma indevida. Na linguagem Java, tanto os métodos quanto os atributos são afetados por **Modificadores de acesso**, que são  palavras reservadas do sistema para limitar o acesso a certa característica do objeto. Os modificadores são: 
+### Public
+Define o acesso como publico, isto é, todas as classes dentro do sistema podem acessar. É ideal usar apenas em métodos e que sejam intencionalmente pensados para o acesso geral.
+### Private
+Define o acesso como privado, isto é, apenas os processos internos da classe podem acessar. É recomendado usar em métodos sem relação de hierarquia e atributos internos da classe.
+### Protected
+Define o acesso apenas em áreas permitidas da classe, como processos internos e subclasses, portanto qualquer classe fora dessa hierarquia não tem permissão para acessar elementos protegidos.
+### Construtor
+O construtor é um método que compartilha o mesmo nome da classe e tem a função de definir os atributos por padrão no momento de instanciar o objeto, é recomendado ouso do construtor pois não é preciso atribuir valores aos atributos de maneira manual.
+### Getters e Setters
+Levando em consideração que no encapsulamento os atributos permanecem privados, para fazer a o acesso é preciso usar métodos chamados get e set. Com funcionalidades de visualização e alteração respectivamente.
 
-All of them are being taken to Boulogne-sur-Mer for treatment, where they were expected to arrive there at 12:30 local time (11:30 BST) on Tuesday.
+### Exemplo prático
+``` Java
+public classs Aviao{
+	private int qtdPoltronas;
+	protected String codigoMotor;
+	private float peso;
+	
+	// Construtor
+	public Aviao(int qtdPoltronas, String codigoMotor, float peso){
+		this.qtdPoltronas = qtdPoltronas;
+		this.codigoMotor = codigoMotor;
+		this.peso = peso;
+	}
+	
+	// Setters
+	public void setQtdPoltronas(int qtdPoltronas){
+		this.qtdPoltronas = qtdPoltronas;
+	}
+	
+	public void setcodigoMotor(String codigoMotor){
+		this.codigoMotor = codigoMotor;
+	}
+	
+	public void setPeso(Float peso){
+		this.peso = peso;
+	}
+	
+	// Getters
+	public int getQtdPoltronas(){
+		return qtdPoltronas;
+	}
+	
+	public String getCodigoMotor(){
+		return codigoMotor;
+	}
+	
+	public float getPeso(){
+		return peso;
+	}
+}
+```
 
-A UK government spokesperson said the Border Security Command was alerted to an incident in the Channel this morning "concerning a migrant small boat in distress in French waters".
+## Herança
+A herança dentro da programação orientada a objetos é a habilidade de separar classes de acordo com sua especificidade. Dessa forma uma superclasse tem atributos generalizados e subclasses tem conteúdos mais específicos.
 
-It said British vessels assisted in the operation, adding that so far there have been no fatalities reported.
+Uma superclasse tem a capacidade de passar seus atributos e métodos como herança para sua subclasse. No entanto esses conteúdos só podem ser acessados diretamente pela sublcasse se forem públicos ou protegidos.
 
-They added that the incident "underlines the terrible dangers of small boat crossings".
+A sintaxe em Java para indicar que uma classe herda os elementos de outra é `extends`, em que o nome da superclasse é colocado após a extensão. Em conjunto a sintaxe `super` é usada no construtor na subclasse para passar os atributos herdados para a superclasse.
+### Exemplo prático
 
-"We continue to work relentlessly with the French and our partners overseas to prevent these perilous journeys," they said.
+``` Java
+public classs Aviao{
+	protected int qtdPoltronas;
+	protected String codigoMotor;
+	private float peso;
+	
+	// Construtor
+	public Aviao(int qtdPoltronas, String codigoMotor, float peso){
+		this.qtdPoltronas = qtdPoltronas;
+		this.codigoMotor = codigoMotor;
+		this.peso = peso;
+	}
+}
 
-Earlier, the UK Coastguard said: "A vessel caught fire earlier this morning whilst in the French search and rescue region. UK vessels and a lifeboat are assisting."
+public class MonoMotor extends Aviao{
+	private int qtdHelices;
+	
+	// Construtor
+	public MonoMotor(int qtdPoltronas, String codigoMotor, float peso, int qtdHelices){
+		// Super usado para repassar atributos;
+		super(qtdPoltronas, codigoMotor, peso);
+		this.qtdHelices = qtdHelices;
+	}
+}
+```
+
+## Polimorfismo
+Polimorfismo é a capacidade de objetos de diferentes classes responderem de forma distinta os mesmos métodos, assim personalizando o comportamento de um método para cada classe que o chamar.
+
+### Polimorfismo de sobrecarga
+Ocorre quando métodos tem o mesmo nome mas passam parâmetros diferentes.
+
+``` Java
+public classs Aviao{
+	protected int qtdPoltronas;
+	protected String codigoMotor;
+	private float peso;
+	
+	// Construtor
+	public Aviao(int qtdPoltronas, String codigoMotor, float peso){
+		this.qtdPoltronas = qtdPoltronas;
+		this.codigoMotor = codigoMotor;
+		this.peso = peso;
+	}
+	
+	// Construtor com menos argumentos
+	public Aviao(String codigoMotor, float peso)
+}
+
+Aviao cargueiro = Aviao("Rolls-Royce", 44.6); // Avião cargueiro não tem assentos
+Aviao comercial = Aviao(44,"Mercedes-Benz", 77.4);
+
+```
+### Polimorfismo de sobreposição
+Ocorre quando uma subclasse altera o funcionamento de um método de sua superclasse, de forma que a partir da classe é possível ter diversos tipos de funcionamento com a mesma assinatura.
+```Java
+public class Aeronave{
+	public void voar(){
+		System.out.println("Aeronave voando");
+	}
+}
+
+public class Aviao extends Aeronave{
+	@Override
+	public void voar(){
+		System.out.println("Avião voando");
+	}
+}
+```
+### Polimorfismo de inclusão
+O polimorfismo de inclusão, também chamado de subtipagem é usado quando é necessário tratar diversas subclasses como uma mesma superclasse. Dessa forma, apenas os métodos e atributos em comum com a superclasse são tratáveis dentro do uso desse tipo de polimorfismo.
+```Java
+// Continuação do código acima
+public class AeronaveController{
+	public void controlar(Aeronave veiculo){
+		veiculo.voar(); // Chamada polimorfica
+	}
+}
+```
+A chamada polimórfica acima pode referenciar todas as subclasses de aeronave o que faz com que apenas um método tenha vários resultados.
+# Arquitetura MVC
+A arquitetura MVC é uma forma de organizar o desenvolvimento de software e consiste na divisão das responsabilidade do código em três camadas.
+
+## Model
+A camada de modelo contém o estado da aplicação, dados e todas as regras de negócios. Isso faz com que essa camada faça parte do processamento interno de informações do programa.
+
+## View
+A camada de visualização é onde o usuário entra em contato com o programa, normalmente integra uma interface gráfica e é responsável apenas pela entrada e saída de dados pelo usuário.
+
+## Controller
+A camada de controle é a conexão entre o modelo e a View, a criação de um controlador é justamente para que o usuário não tenha acesso direto as regras de negócios do modelo através da view.
+
+# Interface gráfica com Swing

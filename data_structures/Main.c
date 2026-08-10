@@ -59,6 +59,15 @@ int getIdFromDictionary(hashNode dictionary[], char* palavra){
 
 
 
+/*********************************************************/
+/**      Pega todos os documentos ja processados,
+        uma lista de palavras e monta a arvore binaria
+        baseado no score de cada documento.             **/
+/*********************************************************/
+/*********************************************************/
+/**      Get all processed documents, a string list and
+        make a binary tree based at the score of them.  **/
+/*********************************************************/
 void getAllDocumentsAndMakeTree(archiveWords archives[], BinaryTree** tree, lS_descritor* toCompare){
     hashNode* auxHashNode;
     node_string_List* auxStringList;
@@ -128,6 +137,8 @@ int main(){
     processStack->head = NULL;
     processStack->_size = 0;
 
+    int controle = 1;
+
     BinaryTree* binaryTree;
 
     //  Inicializacao de "processedArchives"
@@ -148,7 +159,7 @@ int main(){
 
     //  While para repeticao do codigo
     //  While to choose different functions
-    while(1){
+    while(controle){
         op = MainMenu();
         switch(op){
             case 1:     // Enfileirar documento
@@ -264,6 +275,9 @@ int main(){
                 printf("Arvore em ordem:\n");
                 readTreeInOrder(binaryTree);
                 freeTree(&binaryTree);
+                break;
+            case 12:
+                controle = 0;
                 break;
         }
     }
